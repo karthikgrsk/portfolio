@@ -11,10 +11,19 @@ export const Container = styled.div`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    /* collapse to three columns on small screens to allow wrapping */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+    padding: 0.5rem 0.5rem 0;
+  }
+`;
+
+export const Span = styled.span`
+  font-size: 2rem;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.2rem;
   }
 `;
 export const Div1 = styled.div`
@@ -30,8 +39,13 @@ export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+    /* place nav on second row and center it */
+    grid-area: 2 / 1 / 3 / 4;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 `;
 export const Div3 = styled.div`
@@ -41,7 +55,9 @@ export const Div3 = styled.div`
   align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    /* move social icons to the right on first row for small screens */
+    grid-area: 1 / 3 / 2 / 4;
+    justify-content: flex-end;
   }
 `;
 
@@ -57,7 +73,9 @@ export const NavLink = styled.a`
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    line-height: 20px;
   }
 `;
 
