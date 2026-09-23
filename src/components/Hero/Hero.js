@@ -15,7 +15,7 @@ const Hero = () => (
          Software Developer
         , Turning Ideas Into Real Applications
       </SectionText>
-      <Button onClick={ () => {window.location = 'https://drive.google.com/file/d/1eKQGViMuERfAEOSYqNo7susjYrgqykYp/view?usp=sharing'}}>DownLoad Resume</Button>
+      <Button onClick={ () => {window.location = 'https://drive.google.com/file/d/1LIUEPRsxuhnNeCmYS7ObJVUcQc4HdKg3/view?usp=sharing'}}>DownLoad Resume</Button>
     </LeftSection>
   </Section>
 );
